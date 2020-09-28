@@ -11,7 +11,36 @@
 		3D107D4D2521D6AC0088DE7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D107D4C2521D6AC0088DE7E /* ContentView.swift */; };
 		3D107D4F2521D6AE0088DE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D107D4E2521D6AE0088DE7E /* Assets.xcassets */; };
 		3D107D522521D6AE0088DE7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D107D512521D6AE0088DE7E /* Preview Assets.xcassets */; };
+		3D107D612521D8890088DE7E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D107D602521D8890088DE7E /* WidgetKit.framework */; };
+		3D107D632521D8890088DE7E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D107D622521D8890088DE7E /* SwiftUI.framework */; };
+		3D107D662521D8890088DE7E /* superWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D107D652521D8890088DE7E /* superWidget.swift */; };
+		3D107D682521D88A0088DE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D107D672521D88A0088DE7E /* Assets.xcassets */; };
+		3D107D6C2521D88A0088DE7E /* superWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3D107D5E2521D8890088DE7E /* superWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D107D6A2521D88A0088DE7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D107D3F2521D6AC0088DE7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D107D5D2521D8890088DE7E;
+			remoteInfo = superWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3D107D702521D88A0088DE7E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3D107D6C2521D88A0088DE7E /* superWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3D107D472521D6AC0088DE7E /* KEDapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KEDapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +49,12 @@
 		3D107D4E2521D6AE0088DE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D107D512521D6AE0088DE7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D107D532521D6AE0088DE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D107D5E2521D8890088DE7E /* superWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = superWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D107D602521D8890088DE7E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3D107D622521D8890088DE7E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3D107D652521D8890088DE7E /* superWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superWidget.swift; sourceTree = "<group>"; };
+		3D107D672521D88A0088DE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D107D692521D88A0088DE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +65,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3D107D5B2521D8890088DE7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D107D632521D8890088DE7E /* SwiftUI.framework in Frameworks */,
+				3D107D612521D8890088DE7E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -37,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				3D107D492521D6AC0088DE7E /* KEDapp */,
+				3D107D642521D8890088DE7E /* superWidget */,
+				3D107D5F2521D8890088DE7E /* Frameworks */,
 				3D107D482521D6AC0088DE7E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				3D107D472521D6AC0088DE7E /* KEDapp.app */,
+				3D107D5E2521D8890088DE7E /* superWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +116,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3D107D5F2521D8890088DE7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D107D602521D8890088DE7E /* WidgetKit.framework */,
+				3D107D622521D8890088DE7E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D107D642521D8890088DE7E /* superWidget */ = {
+			isa = PBXGroup;
+			children = (
+				3D107D652521D8890088DE7E /* superWidget.swift */,
+				3D107D672521D88A0088DE7E /* Assets.xcassets */,
+				3D107D692521D88A0088DE7E /* Info.plist */,
+			);
+			path = superWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,15 +145,34 @@
 				3D107D432521D6AC0088DE7E /* Sources */,
 				3D107D442521D6AC0088DE7E /* Frameworks */,
 				3D107D452521D6AC0088DE7E /* Resources */,
+				3D107D702521D88A0088DE7E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3D107D6B2521D88A0088DE7E /* PBXTargetDependency */,
 			);
 			name = KEDapp;
 			productName = KEDapp;
 			productReference = 3D107D472521D6AC0088DE7E /* KEDapp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3D107D5D2521D8890088DE7E /* superWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D107D6D2521D88A0088DE7E /* Build configuration list for PBXNativeTarget "superWidgetExtension" */;
+			buildPhases = (
+				3D107D5A2521D8890088DE7E /* Sources */,
+				3D107D5B2521D8890088DE7E /* Frameworks */,
+				3D107D5C2521D8890088DE7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = superWidgetExtension;
+			productName = superWidgetExtension;
+			productReference = 3D107D5E2521D8890088DE7E /* superWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +184,9 @@
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					3D107D462521D6AC0088DE7E = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					3D107D5D2521D8890088DE7E = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
@@ -117,6 +205,7 @@
 			projectRoot = "";
 			targets = (
 				3D107D462521D6AC0088DE7E /* KEDapp */,
+				3D107D5D2521D8890088DE7E /* superWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +217,14 @@
 			files = (
 				3D107D522521D6AE0088DE7E /* Preview Assets.xcassets in Resources */,
 				3D107D4F2521D6AE0088DE7E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D107D5C2521D8890088DE7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D107D682521D88A0088DE7E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +240,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3D107D5A2521D8890088DE7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D107D662521D8890088DE7E /* superWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D107D6B2521D88A0088DE7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D107D5D2521D8890088DE7E /* superWidgetExtension */;
+			targetProxy = 3D107D6A2521D88A0088DE7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3D107D542521D6AE0088DE7E /* Debug */ = {
@@ -265,6 +378,7 @@
 		3D107D572521D6AE0088DE7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +401,7 @@
 		3D107D582521D6AE0088DE7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +416,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = patricio.KEDapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D107D6E2521D88A0088DE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T9UHPNS5GN;
+				INFOPLIST_FILE = superWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = patricio.KEDapp.superWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D107D6F2521D88A0088DE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T9UHPNS5GN;
+				INFOPLIST_FILE = superWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = patricio.KEDapp.superWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,6 +480,15 @@
 			buildConfigurations = (
 				3D107D572521D6AE0088DE7E /* Debug */,
 				3D107D582521D6AE0088DE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D107D6D2521D88A0088DE7E /* Build configuration list for PBXNativeTarget "superWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D107D6E2521D88A0088DE7E /* Debug */,
+				3D107D6F2521D88A0088DE7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
