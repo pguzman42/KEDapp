@@ -16,6 +16,9 @@
 		3D107D662521D8890088DE7E /* superWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D107D652521D8890088DE7E /* superWidget.swift */; };
 		3D107D682521D88A0088DE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D107D672521D88A0088DE7E /* Assets.xcassets */; };
 		3D107D6C2521D88A0088DE7E /* superWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3D107D5E2521D8890088DE7E /* superWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3D107D792521EC770088DE7E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D107D732521EBD40088DE7E /* Pokemon.swift */; };
+		3D31855B25236B7500D74A47 /* EntryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D31855325236B0400D74A47 /* EntryFactory.swift */; };
+		3D31856225236B7900D74A47 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D31855725236B1A00D74A47 /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		3D107D652521D8890088DE7E /* superWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superWidget.swift; sourceTree = "<group>"; };
 		3D107D672521D88A0088DE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D107D692521D88A0088DE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D107D732521EBD40088DE7E /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		3D31855325236B0400D74A47 /* EntryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryFactory.swift; sourceTree = "<group>"; };
+		3D31855725236B1A00D74A47 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				3D107D652521D8890088DE7E /* superWidget.swift */,
+				3D31855325236B0400D74A47 /* EntryFactory.swift */,
+				3D31855725236B1A00D74A47 /* ApiService.swift */,
+				3D107D732521EBD40088DE7E /* Pokemon.swift */,
 				3D107D672521D88A0088DE7E /* Assets.xcassets */,
 				3D107D692521D88A0088DE7E /* Info.plist */,
 			);
@@ -244,7 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D31855B25236B7500D74A47 /* EntryFactory.swift in Sources */,
 				3D107D662521D8890088DE7E /* superWidget.swift in Sources */,
+				3D31856225236B7900D74A47 /* ApiService.swift in Sources */,
+				3D107D792521EC770088DE7E /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
