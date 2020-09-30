@@ -8,6 +8,21 @@
 import Foundation
 import Combine
 
+extension Generation {
+    var range: Range<Int> {
+        switch self {
+        case .generation1:
+            return 1..<151
+        case .generation2:
+            return 152..<251
+        case .generation3:
+            return 252..<386
+        case .unknown:
+            return 1..<2
+        }
+    }
+}
+
 final class ApiService {
 
     static let shared = ApiService()
@@ -23,8 +38,8 @@ final class ApiService {
             .eraseToAnyPublisher()
     }
 
-    func getPokemon() -> AnyPublisher<Pokemon, Never> {
-        let randomPokemonNumber = Int.random(in: 1..<151)
+    func getPokemon(generation: Generation) -> AnyPublisher<Pokemon, Never> {
+        let randomPokemonNumber = Int.random(in: generation.range)
         var url = URL(string: "https://pokeapi.co/api/v2/pokemon")!
         url.appendPathComponent("\(randomPokemonNumber)")
 

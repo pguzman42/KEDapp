@@ -10,11 +10,11 @@ import Combine
 
 final class EntryFactory {
     private var requests = Set<AnyCancellable>()
-    func makeSimpleEntry(completion: @escaping (SimpleEntry) -> Void) {
+    func makeSimpleEntry(generation: Generation = .generation1, completion: @escaping (SimpleEntry) -> Void) {
 
         let getPokemonShared = ApiService
             .shared
-            .getPokemon()
+            .getPokemon(generation: generation)
             .share()
 
         let getImage = getPokemonShared

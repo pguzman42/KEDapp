@@ -8,8 +8,29 @@
 import WidgetKit
 import SwiftUI
 
-struct Provider: TimelineProvider {
+struct IntentProvider: IntentTimelineProvider {
+    var entryFactory = EntryFactory()
+    
+    func placeholder(in context: Context) -> SimpleEntry {
+        SimpleEntry(date: Date(), pokemon: nil, pokemonImageData: nil)
+    }
 
+    func getSnapshot(for configuration: SelectGenerationIntent, in context: Context, completion: @escaping (SimpleEntry) -> Void) {
+        let entry = SimpleEntry(date: Date(), pokemon: nil, pokemonImageData: nil)
+        completion(entry)
+    }
+
+    func getTimeline(for configuration: SelectGenerationIntent, in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
+        entryFactory.makeSimpleEntry(generation: configuration.generation) { entry in
+            let period = Calendar.current.date(byAdding: .minute, value: 2, to: Date())!
+            completion(Timeline(entries: [entry], policy: .after(period)))
+        }
+    }
+}
+
+
+
+struct Provider: TimelineProvider {
     var entryFactory = EntryFactory()
 
     func placeholder(in context: Context) -> SimpleEntry {
@@ -70,7 +91,29 @@ struct superWidgetEntryView : View {
     }
 }
 
+
 @main
+struct superWidgetBundle: WidgetBundle {
+
+    var body: some Widget {
+        superWidgetWithConfig()
+        superWidget()
+    }
+}
+
+struct superWidgetWithConfig: Widget {
+    let kind: String = "superWidgetWithConfig"
+
+    var body: some WidgetConfiguration {
+        IntentConfiguration(kind: kind, intent: SelectGenerationIntent.self, provider: IntentProvider()) { entry in
+            superWidgetEntryView(entry: entry)
+        }.configurationDisplayName("My Other Widget")
+        .supportedFamilies([.systemSmall,.systemLarge])
+        .description("This is an example of another widget.")
+
+    }
+}
+
 struct superWidget: Widget {
     let kind: String = "superWidget"
 
@@ -87,6 +130,6 @@ struct superWidget: Widget {
 struct superWidget_Previews: PreviewProvider {
     static var previews: some View {
         superWidgetEntryView(entry: SimpleEntry(date: Date(), pokemon: Pokemon.default, pokemonImageData: nil))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
