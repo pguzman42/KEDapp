@@ -87,7 +87,7 @@ struct superWidgetEntryView : View {
                     }
                 }.padding()
             } else { Text("Something went wrong") }
-        }
+        }.widgetURL(URL(string: entry.pokemon?.name ?? "noname")!)
     }
 }
 

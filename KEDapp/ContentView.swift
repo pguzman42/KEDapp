@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var stringToDisplay: String = "Hello, world!"
     var body: some View {
-        Text("Hello, world!")
+        Text(stringToDisplay)
             .padding()
+            .onOpenURL(perform: { url in
+                stringToDisplay = url.path
+            })
+
     }
 }
 

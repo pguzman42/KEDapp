@@ -19,6 +19,7 @@
 		3D107D792521EC770088DE7E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D107D732521EBD40088DE7E /* Pokemon.swift */; };
 		3D31855B25236B7500D74A47 /* EntryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D31855325236B0400D74A47 /* EntryFactory.swift */; };
 		3D31856225236B7900D74A47 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D31855725236B1A00D74A47 /* ApiService.swift */; };
+		3D87B1B62524D7B30073C389 /* intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7C57925236E5F00A4FD0B /* intents.intentdefinition */; };
 		3DC7C57A25236E5F00A4FD0B /* intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7C57925236E5F00A4FD0B /* intents.intentdefinition */; settings = {ATTRIBUTES = (codegen, ); }; };
 /* End PBXBuildFile section */
 
@@ -249,6 +250,7 @@
 			files = (
 				3D107D4D2521D6AC0088DE7E /* ContentView.swift in Sources */,
 				3D107D4B2521D6AC0088DE7E /* KEDappApp.swift in Sources */,
+				3D87B1B62524D7B30073C389 /* intents.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
